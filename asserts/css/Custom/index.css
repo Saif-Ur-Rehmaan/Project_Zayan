@@ -1,0 +1,215 @@
+body * {
+    box-sizing: border-box;
+}
+
+#MouseAttachment {
+    top: 0;left: 0;
+    position: absolute;
+    width: 40px;
+    min-height: 40px;
+    border-radius: 50%;
+    border: 2px solid #b3ada8;
+    z-index: 2;
+    right: 0; 
+    background-color: transparent; 
+    pointer-events: none; 
+    /* transition: all 1.2s;  */
+}
+
+
+
+#preloder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+    position: fixed;
+    z-index: 3;
+    background-color: #1A1A1A;
+    transition-duration: .8s;
+}
+
+
+#preloder>#prelodertext{
+    display: inline;
+    position: absolute;  
+    font-size: 100px;
+    color: #333;
+    transition-duration: .8s;
+}
+#preloder>#prelodertext::before{
+    content: "LOADING";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #55e6a5; 
+    animation: move 2s infinite alternate;
+}
+
+@keyframes move {
+    0% {
+        clip-path: circle(50px at 0% 50%);
+    }
+    100% {
+        clip-path: circle(50px at 100% 50%);
+    }
+}
+
+
+
+._Navlink {
+    cursor: pointer;
+}
+
+._Navlink ._Icon {
+    background-color: #222831;
+    transition: all .5s;
+}
+
+._Navlink:hover ._Icon {
+    background-color: #55e6a5;
+}
+
+.min-h-inherit {
+    min-height: inherit;
+}
+
+._link {
+    box-sizing: border-box;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+._Word {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.547);
+    font-size: inherit;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    /* transition:all .01s; */
+}
+
+.below {
+    display: inline-block;
+    color: #55e6a5;
+    font-size: inherit;
+    font-weight: 500;
+    position: absolute;
+    left: 0;
+    transform: translateY(100%);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: black;
+}
+
+
+::-webkit-scrollbar-thumb {
+    width: 5px;
+    max-height: 5px;
+    background-color: #232e3c;
+    border-radius: 20px;
+}
+
+.SECTION1 {
+    background: url(../../Images/banner_bg2.png) scroll no-repeat right;
+    background-size: cover;
+}
+
+.TextAnimation {
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    /*max-height:10px ; */
+}
+
+.TextAnimation>._sentence {
+    display: inline;
+    position: absolute;
+    color: #55e6a5;
+    font-weight: 900;
+    transition: all .5s;
+    transform-origin: bottom;
+    transform-style: preserve-3d;
+
+
+}
+
+.is-visible {
+    opacity: 1;
+    transform: rotateX(0);
+    animation: 1.2s cd-rotate-1-in
+}
+
+.is-hidden {
+
+    transform: rotateX(270deg);
+    animation: 1.2s cd-rotate-1-out
+}
+
+@keyframes cd-rotate-1-in {
+    0% {
+        transform: perspective(200px) rotateX(270deg);
+        opacity: 0
+    }
+
+    35% {
+        transform: perspective(200px) rotateX(120deg);
+        opacity: 0
+    }
+
+    65% {
+        opacity: 0
+    }
+
+    100% {
+        transform: perspective(200px) rotateX(360deg);
+        opacity: 1
+    }
+}
+
+@keyframes cd-rotate-1-out {
+    0% {
+        transform: perspective(200px) rotateX(0);
+        opacity: 1
+    }
+
+    35% {
+        transform: perspective(200px) rotateX(-40deg);
+        opacity: 1
+    }
+
+    65% {
+        opacity: 0
+    }
+
+    100% {
+        transform: perspective(200px) rotateX(180deg);
+        opacity: 0
+    }
+}
+
+.Button_DownloadCV {
+    background-color: #55e6a5;
+}
+
+.Button_DownloadCV:hover {
+    background-color: #141c27;
+}
+
+.bg-C_GREEN {
+    background-color: #55e6a5 !important;
+
+}
+
+.onHovGreenColor:hover {
+    color: #55e6a5;
+    transition-duration: .5s;
+}
+
+.onHovGreenColor:hover {
+    color: #55e6a5;
+}
