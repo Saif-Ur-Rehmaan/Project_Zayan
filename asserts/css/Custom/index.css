@@ -3,47 +3,50 @@ body * {
 }
 
 #MouseAttachment {
-    top: 0;left: 0;
+    top: 0;
+    left: 0;
     position: absolute;
     width: 40px;
     min-height: 40px;
     border-radius: 50%;
     border: 2px solid #b3ada8;
     z-index: 2;
-    right: 0; 
-    background-color: transparent; 
-    pointer-events: none; 
+    right: 0;
+    background-color: transparent;
+    pointer-events: none;
     /* transition: all 1.2s;  */
 }
 
+ 
+ 
 
-
-#preloder{
+#preloder {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     min-height: 100vh;
     position: fixed;
-    z-index: 3;
+    z-index: 3000;
     background-color: #1A1A1A;
     transition-duration: .8s;
 }
 
 
-#preloder>#prelodertext{
+#preloder>#prelodertext {
     display: inline;
-    position: absolute;  
+    position: absolute;
     font-size: 100px;
     color: #333;
     transition-duration: .8s;
 }
-#preloder>#prelodertext::before{
+
+#preloder>#prelodertext::before {
     content: "LOADING";
     position: absolute;
     left: 0;
     top: 0;
-    color: #55e6a5; 
+    color: #55e6a5;
     animation: move 2s infinite alternate;
 }
 
@@ -51,6 +54,7 @@ body * {
     0% {
         clip-path: circle(50px at 0% 50%);
     }
+
     100% {
         clip-path: circle(50px at 100% 50%);
     }
@@ -212,4 +216,103 @@ body * {
 
 .onHovGreenColor:hover {
     color: #55e6a5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* section 2 */
+.image_about::before {
+    content: "";
+    background: local url(../../Images/dots.png) 100%/cover;
+    position: absolute;
+    box-sizing: border-box;
+    width: 200px;
+    height: 250px;
+    transform: translate(450px, -80px);
+    z-index: 0;
+    animation: ToggleSize 3s ease-in-out 0s infinite forwards;
+}
+
+@keyframes ToggleSize {
+
+    0%,
+    100% {
+        width: 200px;
+        height: 250px;
+        /* transform: scale(1); */
+    }
+
+    50% {
+        width: 220px;
+        height: 270px;
+        /* transform: scale(1.1); */
+
+    }
+}
+#experienceBox{
+    position: absolute;
+    display: block;
+    background-color: #55e6a5;
+    min-width: 335px; 
+    /* box-sizing: ; */
+    /* min-height:149px; */
+    z-index: 2;
+    bottom: -70px;
+    right: 0;
+}
+
+
+
+
+
+
+
+
+.slide_up {
+    overflow: hidden;
+    font-size: 60px;
+    line-height: 80px;
+}
+
+.slideUpDivChar {
+    display: inline-block;
+    position: relative;
+    transform: translateY(100%); 
+    transition-duration: .5s;
+}
+
+
+
+
+
+._skilltab{
+    background-color: #141c27;
+    color:white ;
+    transition-duration: all 1s;
+    
+}
+._skilltab:hover{
+    background-color: #55e6a5;
+    color:black;
+    
+}
+
+.activeSkillTab{
+    background-color:#55e6a5;
+    color: black;
+
+}
+.progressbar{
+    width: 100%;
+    height: 10px;
+    background-color: #141c27;
 }
